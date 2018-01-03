@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   async componentWillMount() {
-    const person1 = await this.getPerson(14)
+    const person1 = await this.getPerson(1)
     const planet = await this.getData(person1.homeworld)
     
     const vehicles = []
@@ -59,13 +59,14 @@ class App extends Component {
             
             <Route exact path="/" component={() => <PersonPage name={this.state.person.name}
                                                                hairColor={this.state.person.hair_color}
-                                                               homeworldName={this.state.planet.name} />}/>
+                                                               homeworldName={this.state.planet.name}
+                                                               skinColor={this.state.person.skin_color} />}/>
             <Route path="/homeworld" component={() => <HomeworldPage planet={this.state.planet} />}/>
             <Route path="/vehicles" component={() => <VehiclesPage vehicles={this.state.vehicles} /> } />
           </div>
         </Router>
       </div>
-    );
+    )
   }
 }
 

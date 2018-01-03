@@ -10,7 +10,13 @@ export default class extends Component {
         const vehicleElements = []
 
         for (const vehicle of this.props.vehicles) {
-            vehicleElements.push(<li>{vehicle.name} {vehicle.model}</li>)
+            vehicleElements.push((
+                <li>
+                    <div>Name: {vehicle.name}</div>
+                    <div>Model: {vehicle.model}</div>
+                    <div>Max Speed: {vehicle.max_atmosphering_speed}</div>
+                </li>
+            ))
         }
 
         return vehicleElements

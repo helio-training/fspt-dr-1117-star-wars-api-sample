@@ -12,6 +12,7 @@ class HomeworldPage extends Component {
             <div>
                 <h1>{this.props.planet.name}</h1>
                 <p>Diameter: {this.props.planet.diameter}</p>
+                {this.props.planet.orbital_period}
             </div>
         )
     }

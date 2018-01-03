@@ -6,7 +6,8 @@ export default class extends Component {
     static propTypes = {
         name: string.isRequired,
         hairColor: string,
-        homeworldName: string.isRequired
+        homeworldName: string.isRequired,
+        skinColor: string
     }
 
     render() {
@@ -15,6 +16,7 @@ export default class extends Component {
                 <h1>{this.props.name}</h1>
                 <p>{this.props.hairColor}</p>
                 <Link to="/homeworld">{this.props.homeworldName}</Link>
+                {this.props.skin_color}
             </div>
         )
     }
